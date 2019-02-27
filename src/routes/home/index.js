@@ -22,19 +22,30 @@ export default class Home extends Component {
 
 	render(props, state) {
 		return (
-			<section class={`${style.home}`}>
-				<div class={style.tag}>
-					<h1>We're having a makeover!</h1>
-					<a class={style.hero_link} aria-label="Main Content" href="#main">
-						{' '}
-					</a>
-				</div>
+			<section
+				class={`${style.home} ${state.loaded ? style.animation_start : ''}`}
+			>
 				<ScrollAnimation
-					animateIn={style.animation_end}
-					animateOnce
+					animateIn={`${style.animation_end} ${style.dur1000}`}
 					offset={40}
-					delay={0}
-					duration={500}
+					delay={100}
+					duration={0.5}
+					animateOnce
+				>
+					<div class={style.tag}>
+						<h1>We're having a makeover!</h1>
+						<a class={style.hero_link} aria-label="Main Content" href="#main">
+							{' '}
+						</a>
+					</div>
+				</ScrollAnimation>
+
+				<ScrollAnimation
+					animateIn={`${style.animation_end} ${style.dur1000}`}
+					offset={40}
+					delay={300}
+					duration={0.5}
+					animateOnce
 				>
 					<p>
 						We're working on bringing the site up to our high standards and hope
@@ -45,8 +56,23 @@ export default class Home extends Component {
 						patience:
 					</p>
 				</ScrollAnimation>
-				<DiscountBox offer={'10% off'} terms={'Your next treatment'} />
-				<div>
+				<ScrollAnimation
+					animateIn={`${style.animation_end} ${style.dur1000}`}
+					offset={40}
+					delay={500}
+					duration={0.5}
+					animateOnce
+				>
+					<DiscountBox offer={'10% off'} terms={'Your next treatment'} />
+				</ScrollAnimation>
+
+				<ScrollAnimation
+					animateIn={`${style.animation_end} ${style.dur1000}`}
+					offset={40}
+					delay={700}
+					duration={0.5}
+					animateOnce
+				>
 					<p>
 						Simply quote 'MAKEOVER19' when booking. *See our{' '}
 						<Link href="/offer-terms-and-conditions">full terms here</Link>.
@@ -84,13 +110,22 @@ export default class Home extends Component {
 						</a>
 						.
 					</p>
-				</div>
-				<div class={style.valediction_container}>
-					<p>
-						<span class={style.valediction}>With love,</span>
-					</p>
-					<p class={style.valediction_subject}>The Beauty Room Team</p>
-				</div>
+				</ScrollAnimation>
+
+				<ScrollAnimation
+					animateIn={`${style.animation_end} ${style.dur1000}`}
+					offset={40}
+					delay={900}
+					duration={0.5}
+					animateOnce
+				>
+					<div class={style.valediction_container}>
+						<p>
+							<span class={style.valediction}>With love,</span>
+						</p>
+						<p class={style.valediction_subject}>The Beauty Room Team</p>
+					</div>
+				</ScrollAnimation>
 			</section>
 		);
 	}
