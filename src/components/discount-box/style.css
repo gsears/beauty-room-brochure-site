@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+  width: fit-content;
+  background-color: #e8e9f3;
+  border-radius: 6px;
+  padding: 0.4em 2em 0.4em 1em;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-family: 'Oswald', 'Avenir Next Condensed', 'Arial Narrow', 'MS UI Gothic',
+    'sans‑serif';
+  font-weight: 200;
+}
+.container > h2 {
+  font-size: 2rem;
+}
+.container > p {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.main {
+}

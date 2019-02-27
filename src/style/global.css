@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|Oswald:200,300|Special+Elite');
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  font-family: 'Avenir', 'Nunito', arial, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #36454f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin-bottom: 1.6rem;
+}
+
+#app {
+  min-height: 100vh;
+  z-index: 1;
+  position: relative;
+}
+
+@media (max-width: 2560px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1440px) {
+  html {
+    font-size: 16px;
+  }
+}

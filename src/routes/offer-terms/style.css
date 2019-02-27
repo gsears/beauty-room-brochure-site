@@ -1,0 +1,7 @@
+.offer_list > li {
+  margin-top: 1rem;
+}
+
+.spacer {
+  flex: 2 2;
+}
