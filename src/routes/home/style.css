@@ -2,8 +2,8 @@
   transition: all 0s ease;
 }
 
-.animation_start > * {
-  opacity: 0;
+.animation_start {
+  /* opacity: 0; */
   transform: translateY(-3rem);
 }
 
