@@ -40,7 +40,7 @@ export default class Home extends Component {
 		return (
 			<section class={`${style.home} ${state.loaded ? style.animation : ''}`}>
 				<div class={style.tag}>
-					<h1>Covid-19 Updates</h1>
+					<h1>Important Updates</h1>
 					<a class={style.hero_link} aria-label="Main Content" href="#main">
 						{' '}
 					</a>
