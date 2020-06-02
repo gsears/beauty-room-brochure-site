@@ -6,21 +6,6 @@ import DiscountBox from '../../components/discount-box';
 
 import ScrollAnimation from 'react-animate-on-scroll';
 
-import TrackVisibility from 'react-on-screen';
-
-const AnimatedDiv = ({ delay, isVisible, children }) => (
-	<ScrollAnimation
-		animateIn={`${style.animation_end} ${style.dur1000}`}
-		offset={40}
-		delay={isVisible ? delay : 0}
-		duration={1}
-		animateOnce
-	>
-		{' '}
-		{children}
-	</ScrollAnimation>
-);
-
 export default class Home extends Component {
 	loadClass = () => {
 		this.setState({ loaded: true });
@@ -37,17 +22,23 @@ export default class Home extends Component {
 
 	render(props, state) {
 		return (
-			<section class={`${style.home}`}>
-				<TrackVisibility>
-					<AnimatedDiv delay={3000}>
-						<div class={style.tag}>
-							<h1>We're having a makeover!</h1>
-							<a class={style.hero_link} aria-label="Main Content" href="#main">
-								{' '}
-							</a>
-						</div>
-					</AnimatedDiv>
-				</TrackVisibility>
+			<section
+				class={`${style.home} ${state.loaded ? style.animation_start : ''}`}
+			>
+				<ScrollAnimation
+					animateIn={`${style.animation_end} ${style.dur1000}`}
+					offset={40}
+					delay={100}
+					duration={0.5}
+					animateOnce
+				>
+					<div class={style.tag}>
+						<h1>We're having a makeover!</h1>
+						<a class={style.hero_link} aria-label="Main Content" href="#main">
+							{' '}
+						</a>
+					</div>
+				</ScrollAnimation>
 
 				<ScrollAnimation
 					animateIn={`${style.animation_end} ${style.dur1000}`}
