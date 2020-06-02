@@ -6,7 +6,6 @@ import Footer from './footer';
 import Hero from './hero-carousel';
 // Code-splitting is automated for routes
 import Home from '../routes/home';
-import OfferTerms from '../routes/offer-terms';
 
 export default class App extends Component {
 
@@ -36,8 +35,7 @@ export default class App extends Component {
 					<Header />
 					<div class={style.main} id="main">
 						<Router>
-							<Home path="/" />
-							<OfferTerms path="/offer-terms-and-conditions/" />
+							<Home default path="/" />
 						</Router>
 					</div>
 					<Footer />
