@@ -40,38 +40,46 @@ export default class Home extends Component {
 		return (
 			<section class={`${style.home} ${state.loaded ? style.animation : ''}`}>
 				<div class={style.tag}>
-					<h1>We're having a makeover!</h1>
+					<h1>Covid-19 Updates</h1>
 					<a class={style.hero_link} aria-label="Main Content" href="#main">
 						{' '}
 					</a>
 				</div>
 
 				<div>
-					<p>
-						Following government advice on the covid-19 pandemic, we are sadly temporarily closed until the UK government and monitoring bodies deem it safe to reopen.
-						In these uncertain times, our main priority is the safety of our team and clients.
-						To this end,  Given the nature of our work, we are unable to enforce the social distancing measures that are so important at this time we need to protect ourselves and others. We are working on extra measures and shall continue to do so to ensure everyone’s safety for when we can reopen. We can’t thank you enough for continuing to support our business, your kind words and messages, it means a lot to us and we miss you all.
-						A huge thank you to all our key workers and NHS for all your hard work and bravery, you are true heroes and an inspiration to us all.
-						Please stay strong, stay safe, stay alert and we shall get through this together 🤍
-					</p>
-					<p>
-						As a thank you for bearing with us, here's a little treat for your
-						patience:
-					</p>
+					<h3>
+						Following government advice on the coronavirus pandemic, we are sadly temporarily closed until the UK government and monitoring bodies deem it safe to reopen.
+					</h3>
 				</div>
-
-
-				<DiscountBox offer={'10% off'} terms={'Your next treatment'} />
-
 				<div>
 					<p>
-						Simply quote 'MAKEOVER19' when booking. *See our{' '}
-						<Link href="/offer-terms-and-conditions">full terms here</Link>.
-					</p>
+
+						In these uncertain times, our main priority is the safety of our team and clients. Unfortunately, given the nature of our work, we are unable to enforce the social distancing measures that are so important in counteracting the spread of coronavirus.
+						Thus we have had to make the difficult decision to stop our treatments and trading for the time being. </p>
 					<p>
-						In the meantime, be sure to stay up to date with our latest news and{' '}
-						<strong>
-							exclusive offers on{' '}
+						Rest assured that we are making preparations for our reopening, including additional measures that will prioritise our customers' safety.
+						</p>
+					<p>
+						We can’t thank you enough for continuing to support our business. Your kind words and messages mean so much to us and we miss you all.
+						In particular we'd like to give a special thank you to all our key workers and NHS staff for all your hard work and bravery. You are true heroes and an inspiration to us all.
+						</p>
+					<p>
+						Please stay strong, stay safe, stay alert and we shall get through this together.
+					</p>
+
+				</div>
+
+				<div class={style.valediction_container}>
+					<p>
+						<span class={style.valediction}>With love,</span>
+					</p>
+					<p class={style.valediction_subject}>The Beauty Room Team</p>
+				</div>
+
+				<div>
+
+					<p>
+						Be sure to stay up to date with the latest developments on <strong>
 							<a
 								target="_blank"
 								rel="noopener noreferrer"
@@ -79,7 +87,9 @@ export default class Home extends Component {
 							>
 								Instagram
 							</a>{' '}
+						</strong>
 							and{' '}
+						<strong>
 							<a
 								target="_blank"
 								rel="noopener noreferrer"
@@ -91,26 +101,20 @@ export default class Home extends Component {
 						.
 					</p>
 					<p>
-						Finally, be sure to view{' '}
 						<a
 							href="../assets/TBR_PriceList_Spring19.pdf"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							our latest treatment menu
+							Our treatment menu
 						</a>
-						.
+						{' '} is still available for download.
 					</p>
 
 				</div>
 
 
-				<div class={style.valediction_container}>
-					<p>
-						<span class={style.valediction}>With love,</span>
-					</p>
-					<p class={style.valediction_subject}>The Beauty Room Team</p>
-				</div>
+
 			</section>
 		);
 	}
