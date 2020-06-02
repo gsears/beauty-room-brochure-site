@@ -13,6 +13,7 @@ const AnimatedDiv = ({ delay, isVisible, children }) => (
 		animateIn={`${style.animation_end} ${style.dur1000}`}
 		offset={40}
 		delay={isVisible ? delay : 0}
+		opactity={isVisible ? 0.9 : 0}
 		duration={1}
 		animateOnce
 	>
@@ -37,25 +38,15 @@ export default class Home extends Component {
 
 	render(props, state) {
 		return (
-			<section class={`${style.home}`}>
-				<TrackVisibility>
-					<AnimatedDiv delay={3000}>
-						<div class={style.tag}>
-							<h1>We're having a makeover!</h1>
-							<a class={style.hero_link} aria-label="Main Content" href="#main">
-								{' '}
-							</a>
-						</div>
-					</AnimatedDiv>
-				</TrackVisibility>
+			<section class={`${style.home} ${state.loaded ? style.animation : ''}`}>
+				<div class={style.tag}>
+					<h1>We're having a makeover!</h1>
+					<a class={style.hero_link} aria-label="Main Content" href="#main">
+						{' '}
+					</a>
+				</div>
 
-				<ScrollAnimation
-					animateIn={`${style.animation_end} ${style.dur1000}`}
-					offset={40}
-					delay={300}
-					duration={0.5}
-					animateOnce
-				>
+				<div>
 					<p>
 						We're working on bringing the site up to our high standards and hope
 						to be up and running soon.
@@ -64,24 +55,12 @@ export default class Home extends Component {
 						As a thank you for bearing with us, here's a little treat for your
 						patience:
 					</p>
-				</ScrollAnimation>
-				<ScrollAnimation
-					animateIn={`${style.animation_end} ${style.dur1000}`}
-					offset={40}
-					delay={500}
-					duration={0.5}
-					animateOnce
-				>
-					<DiscountBox offer={'10% off'} terms={'Your next treatment'} />
-				</ScrollAnimation>
+				</div>
 
-				<ScrollAnimation
-					animateIn={`${style.animation_end} ${style.dur1000}`}
-					offset={40}
-					delay={700}
-					duration={0.5}
-					animateOnce
-				>
+
+				<DiscountBox offer={'10% off'} terms={'Your next treatment'} />
+
+				<div>
 					<p>
 						Simply quote 'MAKEOVER19' when booking. *See our{' '}
 						<Link href="/offer-terms-and-conditions">full terms here</Link>.
@@ -119,22 +98,16 @@ export default class Home extends Component {
 						</a>
 						.
 					</p>
-				</ScrollAnimation>
 
-				<ScrollAnimation
-					animateIn={`${style.animation_end} ${style.dur1000}`}
-					offset={40}
-					delay={900}
-					duration={0.5}
-					animateOnce
-				>
-					<div class={style.valediction_container}>
-						<p>
-							<span class={style.valediction}>With love,</span>
-						</p>
-						<p class={style.valediction_subject}>The Beauty Room Team</p>
-					</div>
-				</ScrollAnimation>
+				</div>
+
+
+				<div class={style.valediction_container}>
+					<p>
+						<span class={style.valediction}>With love,</span>
+					</p>
+					<p class={style.valediction_subject}>The Beauty Room Team</p>
+				</div>
 			</section>
 		);
 	}
