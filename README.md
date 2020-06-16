@@ -1,5 +1,3 @@
-# construction-beauty-room
-
 # The Beauty Room
 ## Under Construction Brochure Site
 
