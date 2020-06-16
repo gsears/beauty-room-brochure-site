@@ -1,22 +1,9 @@
 # construction-beauty-room
 
-## CLI Commands
+# The Beauty Room
+## Under Construction Brochure Site
 
-``` bash
-# install dependencies
-npm install
+A placeholder for a local beauty salon's website. The client wanted a temporary solution which provided essential information while they arranged for a new website to be constructed.
 
-# serve with hot reload at localhost:8080
-npm run dev
+https://choosealicense.com/no-permission/
 
-# build for production with minification
-npm run build
-
-# test the production build locally
-npm run serve
-
-# run tests with jest and preact-render-spy 
-npm run test
-```
-
-For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
